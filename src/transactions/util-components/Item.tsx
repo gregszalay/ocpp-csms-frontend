@@ -29,6 +29,9 @@ export default function TransactionItem(props: Props) {
       <CardContent>
         <Stack spacing={1} direction="column">
           <Typography component="div">
+            station: <span> </span> {props.transaction.stationId}
+          </Typography>
+          <Typography component="div">
             energyTransferInProgress: <span> </span>{" "}
             {props.transaction.energyTransferInProgress ? "TRUE" : "FALSE"}
           </Typography>
