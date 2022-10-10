@@ -4,7 +4,7 @@ import PeopleIcon from "@mui/icons-material/People";
 import SettingsIcon from "@mui/icons-material/Settings";
 import EvStationTwoToneIcon from "@mui/icons-material/EvStationTwoTone";
 import ElectricCarIcon from "@mui/icons-material/ElectricCar";
-import TapAndPlayIcon from '@mui/icons-material/TapAndPlay';
+import TapAndPlayIcon from "@mui/icons-material/TapAndPlay";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PieChartIcon from "@mui/icons-material/PieChart";
 import MapIcon from "@mui/icons-material/Map";
@@ -19,7 +19,7 @@ const dashboardMenu: Menu[] = [
     children: [
       {
         id: "",
-        label: "Töltők Listája",
+        label: "List of charging stations",
         icon: <EvStationTwoToneIcon />,
         route: "/dashboard/stations/list",
       },
@@ -30,7 +30,7 @@ const dashboardMenu: Menu[] = [
     children: [
       {
         id: "",
-        label: "Töltések Listája",
+        label: "List of charging stations",
         icon: <ElectricCarIcon />,
         route: "/dashboard/transactions",
       },
@@ -41,7 +41,7 @@ const dashboardMenu: Menu[] = [
     children: [
       {
         id: "",
-        label: "RFID azonosítók",
+        label: "List of RFIDs",
         icon: <TapAndPlayIcon />,
         route: "/dashboard/chargetokens/list",
       },

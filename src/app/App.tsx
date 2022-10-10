@@ -101,9 +101,6 @@ function App(props: Props) {
     return () => clearTimeout(timeOutID);
   });
 
-  /*** 3.
-   * STATIONS (read authorization based on 1. and 2. above)
-   * Add listener for the all station records that are visible to the user. */
   React.useEffect(() => {
     if (!db || !userInfo || !userInfo.email) {
       console.log(
@@ -126,9 +123,6 @@ function App(props: Props) {
     );
   }, [db, userInfo]);
 
-  /*** 4.
-   * TRANSACTIONS (read authorization based on 1. and 2. above)
-   * Add listener for the all transaction records that are visible to the user. */
   React.useEffect(() => {
     if (!db || !userInfo || !(stations.length > 0)) {
       console.log(
@@ -151,9 +145,7 @@ function App(props: Props) {
     );
   }, [db, userInfo, stations]);
 
-  /*** 5.
-   * TOKENS (read authorization based on 1. and 2. above)
-   * Add listener for the all token records that are visible to the user. */
+  
   React.useEffect(() => {
     if (!db || !userInfo) {
       console.log(
@@ -175,8 +167,6 @@ function App(props: Props) {
       userInfo
     );
   }, [db, userInfo, transactions]);
-
-  //TOKENS
 
   const handleNewToken = async (newToken: IdTokenType, id: string) => {
     try {

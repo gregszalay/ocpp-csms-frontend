@@ -7,7 +7,6 @@ import Firebase from "./app/apis/firebase/Firebase";
 import FirebaseContext from "./app/contexts/Firebase";
 import RouteContext from "./app/contexts/Route";
 import "./index.css";
-import ScrollToTop from "./app/routing/ScrollToTop";
 
 console.log("index file ran");
 

@@ -14,12 +14,12 @@ import { withFirebaseDataContext } from "../contexts/FirebaseData";
 
 const appRoutes = {
   "/": {
-    label: "Bejelentkezés",
+    label: "Login page",
     component: withFirebaseDataContext(Login, {}),
     subRoutes: {},
   },
   login: {
-    label: "Bejelentkezés",
+    label: "Login page",
     component: withFirebaseDataContext(Login, {}),
     subRoutes: {},
   },
@@ -31,29 +31,29 @@ const appRoutes = {
     }),
     subRoutes: {
       stations: {
-        label: "Töltő lista",
+        label: "Charging station list",
         component: React.Fragment,
         subRoutes: {
           list: {
-            label: "Töltő lista",
+            label: "Charging station list",
             component: withFirebaseDataContext(StationsScreen, {}),
             subRoutes: {},
           },
         },
       },
       chargetokens: {
-        label: "RFID azonosítók",
+        label: "RFIDs",
         component: React.Fragment,
         subRoutes: {
           list: {
-            label: "Token lista",
+            label: "Token list",
             component: withFirebaseDataContext(ChargeTokenScreen, {}),
             subRoutes: {},
           },
         },
       },
       transactions: {
-        label: "Töltések",
+        label: "Transactions",
         component: withFirebaseDataContext(TransactionsScreen, {}),
         subRoutes: {},
       },

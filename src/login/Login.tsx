@@ -22,17 +22,10 @@ export default function Login(props: any) {
     validateEmail();
     setUserSubmit(true);
     if (email && emailIsValid && password)
-      /*  
-    if (password === "123456" && !email.includes("admin")) {
-        alert("Please reset your password before you can sign in");
-        return;
-      }
-*/
       props.firebase
         .signInWithEmailAndPassword(email, password)
         .then((authUser: UserCredential) => {
           console.log("authUser: " + { ...authUser });
-          //props.firebase.resetPassword("gr.szalay@gmail.com");
           console.log("got to here 0");
           props.refresh(authUser);
           console.log("got to here 1");
@@ -43,13 +36,6 @@ export default function Login(props: any) {
           console.log("{error} " + { error });
           navigate("/error");
         });
-    /*.then(() => {
-          const querySnapshot = await getDocs(query(collection(db, "cities"), where("capital", "==", true)););
-          querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            console.log(doc.id, " => ", doc.data());
-          });
-        })*/
   }
 
   return (
@@ -93,7 +79,7 @@ export default function Login(props: any) {
             }
           />
           <Button variant="outlined" type="submit">
-            Bejelentkezés
+            Log In
           </Button>
         </Stack>
       </Stack>

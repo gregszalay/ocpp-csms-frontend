@@ -38,14 +38,6 @@ export async function createRecordInDB(
     if (db) {
       console.log("db: ", { ...db });
       console.log("new record: ", { ...record });
-      /**
-       * hibalehetőségek:
-       * security rules NEM
-       * ez a fv NEM
-       * konkrét object NEM
-       * stringkezelés: NEM
-       * addoc vs setdoc NEM
-       */
       const response: any = await setDoc(doc(db, collectionName, id), record);
       console.log("response: ", { ...response });
     } else {
@@ -70,14 +62,6 @@ export async function createRecordInDBWithoutId(
     if (db) {
       console.log("db: ", { ...db });
       console.log("new record: ", { ...record });
-      /**
-       * hibalehetőségek:
-       * security rules NEM
-       * ez a fv NEM
-       * konkrét object NEM
-       * stringkezelés: NEM
-       * addoc vs setdoc NEM
-       */
       const response: any = await addDoc(
         collection(db, collectionName),
         record
